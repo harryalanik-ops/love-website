@@ -1,0 +1,396 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I Love You ❤️</title>
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+      text-align: center;
+      padding: 40px;
+    }
+
+    .card {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+
+    .subtitle {
+      font-size: 1.05em;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      color: #b62d6e;
+      margin-bottom: 25px;
+    }
+
+    /* Password */
+
+    #content {
+      display: none;
+    }
+
+    input {
+      padding: 10px;
+      width: 80%;
+      margin: 15px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    button {
+      padding: 10px 30px;
+      background: #d63384;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background: #b62d6e;
+    }
+
+    /* Boxes */
+
+    .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 25px;
+  justify-items: center;
+}
+
+
+    .box {
+      background: #ffe6f0;
+      padding: 20px;
+      border-radius: 15px;
+      text-decoration: none;
+      color: #d63384;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: 0.3s;
+    }
+
+.box img {
+  width: 100%;
+  max-width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+    .box:hover {
+      background: #f8c1d9;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      margin-top: 35px;
+      color: #777;
+      font-size: 0.9em;
+    }
+
+/* Hidden message */
+.hidden-message {
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Surprise section */
+#surprise {
+  display: none;
+  margin-top: 25px;
+  padding: 20px;
+  background: #ffe6f0;
+  border-radius: 15px;
+}
+
+/* Countdown */
+#countdown {
+  font-size: 1.2em;
+  margin-top: 25px;
+  color: #b62d6e;
+  font-weight: bold;
+}
+
+/* Flip Countdown */
+
+#flip-countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.time-box {
+  background: #d63384;
+  color: white;
+  padding: 15px 12px;
+  border-radius: 12px;
+  min-width: 70px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  animation: flip 1s infinite;
+}
+
+.time-box span {
+  font-size: 1.6em;
+  font-weight: bold;
+  display: block;
+}
+
+.time-box small {
+  font-size: 0.7em;
+  opacity: 0.9;
+}
+
+@keyframes flip {
+  0% { transform: rotateX(0deg); }
+  50% { transform: rotateX(15deg); }
+  100% { transform: rotateX(0deg); }
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login" class="card">
+
+  <h2>Enter the Secret 💖</h2>
+  <p>Only for you.</p>
+
+  <input type="password" id="password" placeholder="Password">
+
+  <br>
+
+  <button onclick="checkPassword()">Unlock 🔐</button>
+
+  <p id="error" style="color:red;"></p>
+
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content" class="card">
+
+<!-- Flip Countdown -->
+<div id="flip-countdown">
+
+  <div class="time-box">
+    <span id="days">00</span>
+    <small>Days</small>
+  </div>
+
+  <div class="time-box">
+    <span id="hours">00</span>
+    <small>Hours</small>
+  </div>
+
+  <div class="time-box">
+    <span id="minutes">00</span>
+    <small>Minutes</small>
+  </div>
+
+  <div class="time-box">
+    <span id="seconds">00</span>
+    <small>Seconds</small>
+  </div>
+
+</div>
+
+  <h1>I love you Octavia Marie ❤️</h1>
+
+  <p class="subtitle">
+    I think this has been the happiest moment of my life, I have never smiled so hard,
+    loved so hard, and cared so hard. You mean everything to me, and I mean EVERYTHING.
+    I know I have my faults, but I promise to always try for you. I promise to always love you.
+    And I promise to always care for you and treat you right!
+  </p>
+
+  <h2>Songs for Every Feeling You Give Me 🎵</h2>
+
+<div class="grid">
+
+  <a href="https://open.spotify.com/playlist/1neLOoKPybIP940mFg4PV5?si=0685477653344d75&pt=f663c605aac45bd70171de9afba2ae93"
+     target="_blank"
+     class="box">
+
+    <img src="images/happiness.jpeg" alt="Happiness">
+
+    Happiness
+
+  </a>
+
+  <a href="https://open.spotify.com/playlist/3RXT4o4FNFSlAYtlZtrVIk?si=212509cfff6f43f0&pt=5e252243a75ebafe53c5756f8aa31826"
+     target="_blank"
+     class="box">
+
+    <img src="images/love.jpeg" alt="Love">
+
+    Love
+
+  </a>
+
+  <a href="https://open.spotify.com/playlist/5OuwA7WpHlQhcVhH6f0Ohd?si=62e56916bb8541dc&pt=662cc599d1c5bdbb31b434ea1d1c9e38"
+     target="_blank"
+     class="box">
+
+    <img src="images/peace.jpeg" alt="Peace">
+
+    Peace
+
+  </a>
+
+  <a href="https://open.spotify.com/playlist/1dHNBhjcYoj0246Em2G9pH?si=f5adb1503713434c&pt=ebdc9d0f040100ded8eb12a19beeea6b"
+     target="_blank"
+     class="box">
+
+    <img src="images/vulnerability.jpg" alt="Vulnerability">
+
+    Vulnerability
+
+  </a>
+
+</div>
+
+
+  <!-- Countdown -->
+<div id="countdown"></div>
+
+<!-- Surprise Button -->
+<button onclick="showSurprise()" style="margin-top:20px;">
+  Surprise Me 💕
+</button>
+
+<!-- Surprise Content -->
+<div id="surprise">
+
+  <h3>nuh in my buh 💖</h3>
+
+  <!-- Replace this song later -->
+
+<audio id="loveSong" src="audio/phat.mp3"></audio>
+
+
+</div>
+
+<!-- Hidden Message -->
+<div class="hidden-message">
+  If you're reading this, I'm probably thinking about you.
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  Made with all my love 💕
+</div>
+
+
+</div>
+
+<script>
+  function checkPassword() {
+
+    const correctPassword = "November152025"; // <-- CHANGE PASSWORD
+
+    const entered = document.getElementById("password").value;
+
+    if (entered === correctPassword) {
+
+      document.getElementById("login").style.display = "none";
+      document.getElementById("content").style.display = "block";
+
+    } else {
+
+      document.getElementById("error").innerText =
+        "Wrong password 💔 Try again.";
+
+    }
+  }
+// Surprise Button
+function showSurprise() {
+  document.getElementById("surprise").style.display = "block";
+
+  const song = document.getElementById("loveSong");
+  song.currentTime = 0;
+  song.play();
+}
+
+// Anniversary Countdown (CHANGE DATE)
+const anniversary = new Date("2025-11-15");
+
+function updateCountdown() {
+
+  const now = new Date();
+  const diff = now - anniversary;
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+  document.getElementById("countdown").innerHTML =
+    "We've been together for " +
+    days + " days, " +
+    hours + " hours, and " +
+    minutes + " minutes 💕";
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// Flip Countdown to 3 Month Anniversary (Feb 15, 2026)
+
+const flipTarget = new Date("2026-02-15T00:00:00");
+
+function updateFlipCountdown() {
+
+  const now = new Date();
+  const diff = flipTarget - now;
+
+  if (diff <= 0) {
+    document.getElementById("days").innerText = "00";
+    document.getElementById("hours").innerText = "00";
+    document.getElementById("minutes").innerText = "00";
+    document.getElementById("seconds").innerText = "00";
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  document.getElementById("days").innerText = String(days).padStart(2, "0");
+  document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+  document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
+  document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+}
+
+setInterval(updateFlipCountdown, 1000);
+updateFlipCountdown();
+
+</script>
+
+</body>
+</html>
