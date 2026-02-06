@@ -280,9 +280,10 @@ index.html
 <div id="countdown"></div>
 
 <!-- Surprise Button -->
-<button onclick="showSurprise()" style="margin-top:20px;">
-  Surprise Me 💕
+<button onclick="toggleSurprise()" style="margin-top:20px;" id="surpriseBtn">
+  Guess what? 💖
 </button>
+
 
 <!-- Surprise Content -->
 <div id="surprise">
@@ -329,12 +330,29 @@ index.html
     }
   }
 // Surprise Button
-function showSurprise() {
-  document.getElementById("surprise").style.display = "block";
+function toggleSurprise() {
 
+  const surprise = document.getElementById("surprise");
   const song = document.getElementById("loveSong");
-  song.currentTime = 0;
-  song.play();
+  const btn = document.getElementById("surpriseBtn");
+
+  // If hidden → show it
+  if (surprise.style.display === "none" || surprise.style.display === "") {
+
+    surprise.style.display = "block";
+    song.play();
+    btn.innerText = "Close 💕";
+
+  } 
+  // If showing → hide it
+  else {
+
+    surprise.style.display = "none";
+    song.pause();
+    song.currentTime = 0; // restart song
+    btn.innerText = "Guess what? 💖";
+
+  }
 }
 
 // Anniversary Countdown (CHANGE DATE)
