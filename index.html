@@ -202,6 +202,43 @@ index.html
   100% { transform: rotateX(0deg); }
 }
 
+/* African Playlist Heart */
+
+.africa-section {
+  margin-top: 50px;
+  padding: 25px;
+  background: #fff0f6;
+  border-radius: 18px;
+}
+
+.africa-text {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.heart-link {
+  font-size: 4em;
+  text-decoration: none;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
   </style>
 </head>
 
@@ -309,6 +346,27 @@ index.html
 
   <!-- Countdown -->
 <div id="countdown"></div>
+
+<!-- African Playlist Section -->
+<div class="africa-section">
+
+  <h2>A Piece of Where I'm From 🌍💛</h2>
+
+  <p class="africa-text">
+    These songs remind me of home, my roots, and who I am.
+    I want you to feel that part of me too ❤️
+  </p>
+
+  <a
+    href="https://open.spotify.com/playlist/19jOZR0xvhGjj8X1iZVEBg?si=3eb0dda666c849ad&pt=53ca0c1b8acc9c08a4ecee2997155a5a"
+    target="_blank"
+    class="heart-link"
+  >
+    ❤️
+  </a>
+
+</div>
+
 
 <!-- Surprise Button -->
 <button onclick="toggleSurprise()" style="margin-top:20px;" id="surpriseBtn">
